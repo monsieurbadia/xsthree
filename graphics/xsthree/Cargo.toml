@@ -1,0 +1,33 @@
+[package]
+name = "xsthree"
+version = "0.1.0"
+authors = ["monsieurbadia"]
+edition = "2018"
+
+[lib]
+name = "xsthree"
+crate-type = ["cdylib"]
+path = "./src/system/lib.rs"
+
+[dependencies]
+js-sys = "0.3.46"
+wasm-bindgen = "0.2.69"
+console_error_panic_hook = { version = "0.1.6", optional = true }
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'console',
+  'Document',
+  'HtmlElement',
+  'HtmlInputElement',
+  'MessageEvent',
+  'Worker',
+  'Element',
+  'HtmlCanvasElement',
+  'WebGlBuffer',
+  'WebGlRenderingContext',
+  'WebGlProgram',
+  'WebGlShader',
+  'Window',
+]
