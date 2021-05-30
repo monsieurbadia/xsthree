@@ -1,6 +1,6 @@
-import { mat4fn } from '../math/mat4';
-import { Box } from '../util';
-import { renderable } from './renderable';
+import {mat4fn} from '../math/mat4';
+import {Box} from '../util';
+import {renderable} from './renderable';
 
 export const camerafn = (params) => (
   Box(camera(params))

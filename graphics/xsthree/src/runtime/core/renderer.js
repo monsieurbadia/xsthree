@@ -151,9 +151,7 @@ const renderer = ({
         );
 
         this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, object.__indexBuf);
-
         this.matrices({object, camera});
-  
         this.gl.bindBuffer(this.gl.ARRAY_BUFFER, object.positionBuf);
 
         this.gl.vertexAttribPointer(
@@ -161,7 +159,6 @@ const renderer = ({
         );
 
         this.gl.enableVertexAttribArray(this.program.position);
-  
         this.gl.bindBuffer(this.gl.ARRAY_BUFFER, object.__colorBuf);
 
         this.gl.vertexAttribPointer(

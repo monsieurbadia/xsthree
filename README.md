@@ -20,7 +20,6 @@ import {
 
   const renderer = rendererfn({width: 500, height: 500})
     .map(framefn(scene, camera, () => {}))
-    .map(workerfn(scene, camera, () => {}))
     .fold(noop);
 
   document.body.appendChild(renderer.canvas);

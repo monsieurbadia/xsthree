@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "xsthree",
-  "author": "monsieurbadia <iammonsieurbadia@example.com>",
+  "author": "monsieurbadia <iammonsieurbadia@gmail.com>",
   "version": "0.1.0",
   "scripts": {
     "build": "rollup -c",
@@ -14,7 +14,6 @@
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@wasm-tool/rollup-plugin-rust": "^1.0.0",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
     "rollup": "^2.50.2",
     "rollup-plugin-glslify": "^1.2.0",
     "rollup-plugin-terser": "^7.0.2",

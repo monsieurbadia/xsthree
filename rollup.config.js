@@ -11,12 +11,17 @@ export default {
 	input: {
 		xsthree: './graphics/xsthree/src/runtime/lib.js',
 	},
-	output: {
+	output: [{
 		name: "xsthree",
 		dir: './public',
 		format: 'iife',
 		sourcemap: production ? false : true,
-	},
+	}, {
+		name: "xsthree",
+		dir: './examples',
+		format: 'iife',
+		sourcemap: production ? false : true,
+	}],
 	plugins: [
 		resolve(),
 		commonjs(),

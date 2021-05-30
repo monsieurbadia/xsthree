@@ -1,4 +1,4 @@
-export const materialfn = (params) => () => (
+export const materialfn = params => () => (
   Box(material(params))
 );
 
