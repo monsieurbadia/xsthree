@@ -1,6 +1,6 @@
-export const scenefn = () => (scene());
+export const scenefn = _ => (scene());
 
-const scene = () => ({
+const scene = _ => ({
   name: "",
   isScene: true,
   children: [],

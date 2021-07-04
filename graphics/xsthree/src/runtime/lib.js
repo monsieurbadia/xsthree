@@ -25,7 +25,7 @@ import { framefn, rendererfn } from './core/renderer';
   const plane = planefn({width: 3, height: 2});
   scene.add(plane);
   
-  const renderer = rendererfn({width: 500, height: 500})
+  const renderer = rendererfn({width: 600, height: 600})
     .map(framefn(scene, camera, () => {}))
     .fold(noop);
 

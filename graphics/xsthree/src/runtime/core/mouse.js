@@ -14,37 +14,37 @@ const mouse = ({x, y, surface}) => ({
   direction: vec2fn(),
   position: vec2fn(x, y),
   lastPosition: vec2fn(),
-  onmousedown({pageX, pageY, preventDefault}) {
+  onmousedown(event) {
     this.drag = true;
-    this.lastPosition.x = pageX;
-    this.lastPosition.y = pageY;
+    this.lastPosition.x = event.pageX;
+    this.lastPosition.y = event.pageY;
 
-    preventDefault();
+    event.preventDefault();
 
     return false;
   },
-  onmousemove({pageX, pageY, preventDefault}) {
+  onmousemove(event) {
     if (!this.drag) return false;
 
     if (this.enable) {
       this.direction.x =
-        (pageX - this.lastPosition.x) * 2 * Math.PI / this.canvas.offsetWidth;
+        (event.pageX - this.lastPosition.x) * 2 * Math.PI / this.canvas.offsetWidth;
 
       this.direction.y =
-        (pageY - this.lastPosition.y) * 2 * Math.PI / this.canvas.offsetHeight;
+        (event.pageY - this.lastPosition.y) * 2 * Math.PI / this.canvas.offsetHeight;
 
       this.THETA += this.direction.x;
       this.PHI += this.direction.y;
-      this.lastPosition.x = pageX;
-      this.lastPosition.y = pageY;
+      this.lastPosition.x = event.pageX;
+      this.lastPosition.y = event.pageY;
     }
 
-    preventDefault();
+    event.preventDefault();
   },
-  onmouseup({preventDefault}) {
+  onmouseup(event) {
     this.drag = false;
 
-    preventDefault();
+    event.preventDefault();
   },
   render() {
     if (this.enable && !this.drag) {

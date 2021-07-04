@@ -1,8 +1,8 @@
-import { is } from "../util/is";
+import {is} from "../util/is";
 
-export const texturefn = () => texture();
+export const texturefn = _ => texture();
 
-const texture = () => ({
+const texture = _ => ({
   load({gl, src}) {
     const texture = gl.createTexture();
     const level = 0;

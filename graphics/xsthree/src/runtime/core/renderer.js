@@ -42,9 +42,9 @@ const renderer = ({
   renderering: false,
   lostingContext: false,
   framefn: () => {},
-  oncontextmenu({preventDefault}) {
+  oncontextmenu(event) {
     this.lostingContext = true;
-    preventDefault();
+    event.preventDefault();
   },
   oncontextrestore(_) {
     this.lostingContext = false;

@@ -2,6 +2,8 @@
 
 > *a pocket and functional 3d library*
 
+I don't think this project is intended to be useful for anyone. It's just a way for me to have fun and test things.
+
 ```js
 import {
   camerafn, scenefn, rendererfn, framefn,

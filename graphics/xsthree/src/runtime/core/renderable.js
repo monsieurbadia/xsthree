@@ -1,7 +1,7 @@
 import {mat4fn} from '../math/mat4';
 import {vec3fn} from '../math/vec3';
 
-export const renderable = () => ({
+export const renderable = _ => ({
   matrix: mat4fn(),
   worldMatrix: mat4fn(),
   position: vec3fn(),
